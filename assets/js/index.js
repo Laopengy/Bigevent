@@ -23,7 +23,6 @@ function getUserInfo() {
         //     Authorization: localStorage.getItem("token"),
         // },
         success: function(res) {
-            console.log(res);
             if (res.status !== 0) {
                 return layer.msg(res.message)
             }
@@ -34,7 +33,7 @@ function getUserInfo() {
     });
 }
 
-
+console.log('欢迎樊康乐的亲爹');
 // 渲染用户的头像
 function renderAvatar(user) {
 
@@ -48,7 +47,6 @@ function renderAvatar(user) {
 
     // 3. 按需渲染用户的头像
     if (user.user_pic !== null) {
-        console.log(123);
         // 3.1 渲染图片头像
         $('.layui-nav-img').attr('src', user.user_pic).show();
         $('.text-avatar').hide();

@@ -2,12 +2,13 @@ const { form } = layui;
 $(function() {
     form.verify({
         nickname: function(value) {
-            if (value.length > 10) {
+            if (value.length > 20) {
                 return '昵称必须小于六位';
             }
         }
     })
 })
+
 initUserInfo()
 
 initUserInfo()
